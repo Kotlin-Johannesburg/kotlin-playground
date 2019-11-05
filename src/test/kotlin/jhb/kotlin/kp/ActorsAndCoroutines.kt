@@ -80,16 +80,16 @@ class CoroutinesTest {
             launch {
                 println("Child job 1 started")
                 delay(3000)
-                println("Child job 1 done")
+                println("I should not happen because my sibling will freak out")
             }
             launch {
                 println("Child job 2 started, but I am going to freak out")
                 delay(2000)
-                throw Exception("Job 2 freaked out")
+                throw Exception("freak out")
             }
         }
         parentJob.join()
-        println("Parent done")
+        println("I should not happen because one of the children freaked out")
     }
 }
 

@@ -2,8 +2,9 @@
 
 A playground for kotlin features.
 
-Feel free to edit the list below for features that should be covered.
-If you do cover them, then tick them off.
+For now, each feature is demonstrated as a unit test. Check the test directory out.
+
+Feel free to edit the list below for features that should be covered.If you do cover them, then tick them off.
 
 ## Features
 
@@ -14,11 +15,11 @@ If you do cover them, then tick them off.
  - [ ] Objects
  - [ ] Properties
  - [ ] Generics
- - [ ] Type Alias
- - [ ] Inline Class
  - [ ] Delegation and Composition
  - [x] Functions
  - [ ] Collections
+ - [ ] DSL building
  - [ ] Coroutines and Actors - Basics
  - [ ] Coroutines and Actors - Advanced
+ 
 

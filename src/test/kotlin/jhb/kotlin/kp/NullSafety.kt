@@ -3,7 +3,7 @@ package jhb.kotlin.kp
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-class NullSafetyTest {
+class NullSafety {
 
     @Test
     fun `using something that might be null in a reference that is not - it is null`() {

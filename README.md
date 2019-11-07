@@ -12,7 +12,7 @@ Feel free to edit the list below for features that should be covered.If you do c
 
  - [x] Null Safety
  - [ ] If and Switch expressions
- - [ ] Data Class
+ - [x] Data Class
  - [ ] Sealed Class
  - [ ] Objects
  - [ ] Properties
@@ -21,7 +21,7 @@ Feel free to edit the list below for features that should be covered.If you do c
  - [x] Functions
  - [ ] Collections
  - [ ] DSL building
- - [ ] Coroutines Basics
+ - [x] Coroutines Basics
  - [ ] Channels Basics
  - [ ] Actors Basics
  

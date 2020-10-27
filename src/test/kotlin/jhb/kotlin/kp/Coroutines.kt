@@ -41,14 +41,16 @@ class CoroutinesBasicsTest {
 
     @Test
     fun `coroutines are light weight`() = runBlocking {
-        val jobs = List(100_000) {
-            launch {
-                delay(1000)
-                print(".")
+        val time = timed {
+            val jobs = List(100_000) {
+                launch {
+                    delay(1000)
+                    print(".")
+                }
             }
+            jobs.joinAll()
         }
-        delay(2000)
-        println()
+        println(time)
         println("All done")
     }
 
@@ -105,7 +107,8 @@ class CoroutineStructureTest {
         // Note: Slightly altered copy paste from kotlin docs.
         // To not propagate errors up and down the tree, we need to use a supervisor and handle errors.
         val supervisor = SupervisorJob()
-        val scope = CoroutineScope(coroutineContext + supervisor) //Combine the scope of this coroutine with the supervisor.
+        val scope =
+            CoroutineScope(coroutineContext + supervisor) //Combine the scope of this coroutine with the supervisor.
         with(CoroutineScope(coroutineContext + supervisor)) {
             // launch the first child and we swallow the exception
             launch(CoroutineExceptionHandler { _, _ -> }) {
